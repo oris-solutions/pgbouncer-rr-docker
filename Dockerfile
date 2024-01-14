@@ -3,7 +3,7 @@ ARG VERSION=1.12.0
 RUN apk add -U --no-cache build-base libevent-dev c-ares-dev libressl-dev python2-dev patch
 WORKDIR /tmp
 RUN wget https://pgbouncer.github.io/downloads/files/$VERSION/pgbouncer-$VERSION.tar.gz && \
-    wget https://github.com/innovate-tech/pgbouncer-rr-patch/archive/v$VERSION.tar.gz && \
+    wget https://github.com/oris-solutions/pgbouncer-rr-patch/archive/v$VERSION.tar.gz && \
     tar -xf pgbouncer-$VERSION.tar.gz && tar -xf v$VERSION.tar.gz  && \
     rm pgbouncer-$VERSION.tar.gz && rm v$VERSION.tar.gz
 WORKDIR /tmp/pgbouncer-rr-patch-$VERSION
